@@ -1,5 +1,5 @@
 # RoadWhiz
-How far can you go? Can you successfully navigate without crashing? A vanilla Javascript driving game for desktop. (beta version)
+How far can you go? Can you successfully navigate without crashing? A vanilla Javascript driving game for desktop. A playable version is available here: https://road-whiz.netlify.app/ (beta version)
 
 ## Usage
 Note: this is a beta version. The game stops after 5 levels, and there are some issues with bounds checking.
