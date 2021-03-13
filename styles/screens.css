@@ -1,0 +1,51 @@
+.screen{
+    width:100%;
+    height:100%;
+    background:rgba(0, 0, 0, 0.8);
+    color:white;
+    position: absolute;;
+    top:0;
+    left:0;
+    z-index:200;
+    text-align:center;
+    font-family: monospace;
+}
+.screen-heading{
+    font-size:40px;
+    margin:8px;
+}
+
+.screen-description{
+    font-size:20px;
+    font-weight:200;
+    color:grey;
+    margin:0;
+}
+
+.btn{
+    font-family: inherit;
+    padding:6px 12px;
+    border-radius:5px;
+    border:none;
+    box-shadow:none;
+    outline:none;
+    font-size:15px;
+    background:rgb(236, 233, 13);
+    margin:0;
+    cursor:pointer;
+}
+
+.btn:hover{
+    opacity:0.8;
+}
+
+
+.welcome-content{
+    height:fit-content;
+    background:rgb(0, 0, 0);
+    border-radius:5px;
+    padding:20px;
+    width:50%;
+    margin:auto;
+    transform:translateY(180px)
+}

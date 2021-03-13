@@ -1,0 +1,135 @@
+:root{
+    --tree-color-left:rgb(35, 66, 35);
+    --tree-color-right:rgb(46, 99, 46);
+
+    
+}
+
+.tree-top{
+    position: absolute;
+    top:-15px;
+    left:0px;
+    border-left: 10px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 10px solid var(--tree-color-left);
+    box-shadow: 0 4px 2px -2px rgba(63, 63, 63, 0.425);
+    z-index:3;
+}
+.tree-top::after{
+    content:"";
+    position: absolute;
+    border-left: 0px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid var(--tree-color-right);
+    box-shadow: 0 4px 2px -2px rgba(63, 63, 63, 0.425);
+    
+}
+
+.tree-middle{
+    position: absolute;
+    top:-11px;
+    left:-10px;
+    border-left: 20px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 20px solid var(--tree-color-left);
+    box-shadow: 0 4px 2px -2px rgba(63, 63, 63, 0.425);
+    z-index:2;
+}
+.tree-middle::after{
+    content:"";
+    position: absolute;
+    border-left: 0px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid var(--tree-color-right);
+    box-shadow: 0 4px 2px -2px rgba(63, 63, 63, 0.425);
+}
+
+.tree-low{
+    position: absolute;
+    top:-5px;
+    left:-20px;
+    border-left: 30px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 30px solid var(--tree-color-left);
+    box-shadow: 0 4px 2px -2px rgba(63, 63, 63, 0.425);
+    z-index:1;
+}
+.tree-low::after{
+    content:"";
+    position: absolute;
+    border-left: 0px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid var(--tree-color-right);
+    box-shadow: 0 4px 2px -2px rgba(63, 63, 63, 0.425);
+}
+
+.tree-stem{
+    position: absolute;
+    width:8px;
+    height:15px;
+    background:rgb(82, 57, 43);
+    z-index:0;
+    border-radius:4px;
+    top:22px;
+    left:5px;
+}
+
+.pothole{
+    position: absolute;
+    width:50px;
+    height:30px;
+    border-radius:50%;
+    background:rgb(39, 39, 39);
+    border-top:8px solid rgba(0, 0, 0, 0.753);
+    border-left:3px solid rgba(0, 0, 0, 0.5);
+    border-right:3px solid rgba(0, 0, 0, 0.377);
+    box-sizing:content-box;
+    border-top-left-radius: 25%;
+    border-bottom:2px dotted grey;
+    
+}
+
+.pothole-striations{
+    width:90%;
+    height:3px;
+    background:rgba(0, 0, 0, 0.295);
+    top:15px;
+    left:3px;
+    position: absolute;
+}
+.pothole-striations2{
+    width:7px;
+    height:28px;
+    background:rgba(0, 0, 0, 0.281);
+    top:0px;
+    left:21px;
+    position: absolute;
+    transform: rotateZ(10deg);
+}
+
+.pothole-striations::before{
+    content:"";
+    position: absolute;
+    width:69%;
+    height:3px;
+    background:rgba(0, 0, 0, 0.247);
+    border-left:1px solid grey;
+    border-bottom:1px dotted rgba(128, 128, 128, 0.658);
+    top:-3px;
+    left:3px;
+    transform:rotateZ(45deg)
+
+}
+
+.pothole-striations::after{
+    content:"";
+    position: absolute;
+    width:69%;
+    height:3px;
+    background:rgba(0, 0, 0, 0.192);
+    top:-3px;
+    left:10px;
+    transform:rotateZ(135deg)
+
+}
+

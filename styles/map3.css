@@ -1,0 +1,42 @@
+.road-fullwidth{
+    background:grey;
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:80px;
+    z-index:0;
+    border-bottom:5px dashed yellow;
+}
+.road-fullwidth::after{
+    background:grey;
+    position: absolute;
+    top:80px;
+    left:0;
+    content:"";
+    width:100%;
+    height:80px;
+    z-index:0;
+}
+
+.road-middle{
+    background:grey;
+    position: absolute;
+    width:75px;
+    height:340px;
+    bottom:0;
+    left:425px;
+    border-top:7px solid white;
+}
+.road-middle::after{
+    background:grey;
+    position: absolute;
+    width:75px;
+    height:340px;
+    bottom:0;
+    content:"";
+    left:75px;
+    border-left:5px dashed yellow;
+    border-top:7px solid white;
+    box-sizing: border-box;
+}

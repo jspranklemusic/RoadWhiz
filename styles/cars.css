@@ -1,0 +1,266 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background-color:black;
+    display:grid;
+    height:100vh;
+    width:100vw;
+    align-content: center;
+    justify-content: center;
+}
+
+#game-area{
+    width:1000px;
+    height:500px;
+    background-color:white;
+    position: relative;
+    overflow:hidden;
+}
+
+.car{
+    height:90px;
+    width:40px;
+    border-radius:10px;
+    position: absolute;
+    transition:0.1s;
+    z-index:1;
+    box-shadow:0px 0px 10px rgba(0, 0, 0, 0.596);
+}
+.car-red{
+    background:linear-gradient(red 0%,rgb(100, 5, 5) 80%);
+}
+
+.car-blue{
+    background:linear-gradient(blue 0%, navy 80%);
+}
+
+.car-yellow{
+    background:linear-gradient(rgb(204, 207, 8) 0%, rgb(128, 115, 0) 80%);
+}
+
+.car-pink{
+    background:linear-gradient(rgb(255, 0, 221) 0%, rgb(128, 0, 117) 80%);
+}
+
+.car-darkblue{
+    background:linear-gradient(rgb(0, 0, 160) 0%, rgb(0, 0, 53) 80%);
+}
+
+.car-black{
+    background:linear-gradient(rgb(39, 39, 39) 0%, rgb(15, 15, 15) 80%);
+}
+
+.car-white{
+    background:linear-gradient(rgb(236, 236, 236) 0%, rgb(167, 167, 167) 80%);
+}
+
+.car-grey{
+    background:linear-gradient(rgb(158, 158, 158) 0%, rgb(88, 88, 88) 80%);
+}
+
+.car-green{
+    background:linear-gradient(green 0%, rgb(9, 75, 9) 80%);
+}
+
+.car-cyan{
+    background:linear-gradient(rgb(0, 255, 242) 0%, rgb(0, 119, 128) 80%);
+}
+
+.car-inner{
+    position:relative;
+    width:100%;
+    height:100%;
+    
+}
+.wheel{
+    height:20px;
+    width:5px;
+    background:black;
+    
+}
+.backleft{
+    position: absolute;
+    bottom:5px;
+    left:-5px;
+}
+.frontleft{
+    position: absolute;
+    top:10px;
+    left:-5px;
+}
+.frontright{
+    position: absolute;
+    top:10px;
+    right:-5px;
+}
+.backright{
+    position: absolute;
+    bottom:5px;
+    right:-5px;
+}
+.windshield{
+    position: absolute;
+    top:25%;
+    width:36px;
+    left:2px;
+    height:12px;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+    border-bottom-left-radius: 35%;
+    border-bottom-right-radius: 35%;
+    background:linear-gradient(white,skyblue)
+}
+
+.door{
+    width:4px;
+    height:25px;
+    position:absolute;
+    background:linear-gradient(white,skyblue);
+    top:40%;
+}
+.door-left{
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    left:1px;
+    
+}
+.door-right{
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    right:1px;
+    
+}
+
+
+.back-windshield{
+    position: absolute;
+    top:70%;
+    width:36px;
+    left:2px;
+    height:7px;
+    border-top-left-radius: 35%;
+    border-top-right-radius: 35%;
+    background:linear-gradient(white,skyblue)
+}
+.headlight{
+    height:5px;
+    width:10px;
+    background:rgb(243, 148, 5);
+}
+.headlight-left{
+    position: absolute;
+    left:0;
+    top:0;
+    border-top-left-radius:10px;
+}
+
+.highbeams-in::after{
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 150px solid rgba(255, 255, 0, 0.555);
+    border-radius:20%;
+    content:"";
+    position: absolute;
+    top:-150px;
+    left:-45px;
+    animation:fadein 0.5s backwards;
+    z-index:100;
+}
+.highbeams-out::after{
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 150px solid rgba(255, 255, 0, 0.555);
+    border-radius:20%;
+    content:"";
+    position: absolute;
+    top:-150px;
+    left:-45px;
+    animation:fadeout 0.5s forwards;
+    z-index:100;
+}
+
+.fadeout{
+    animation:fadeout 0.5s forwards;
+}
+
+.fadeinslide{
+    animation:fadeinslide 0.6s forwards;
+}
+
+.fadeoutslide{
+    animation:fadeoutslide 0.6s forwards;
+}
+
+@keyframes fadein{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+@keyframes fadeinslide{
+    0%{
+        opacity:0;
+        transform:translateY(50px)
+    }
+    100%{
+        opacity:1;
+        transform:translateY(0px)
+    }
+}
+
+@keyframes fadeoutslide{
+    0%{
+        opacity:1;
+        transform:translateY(0px)
+    }
+    100%{
+        opacity:0;
+        transform:translateY(0px)
+    }
+}
+
+@keyframes fadeout{
+    0%{
+        opacity:1;
+    }
+    100%{
+        opacity:0;
+    }
+}
+
+
+
+.headlight-right{
+    position: absolute;
+    right:0;
+    top:0;
+    border-top-right-radius:10px;
+}
+.mirror-right{
+    width:10px;
+    height:5px;
+    background:rgb(51, 51, 51);
+    position: absolute;
+    top:30%;
+    left:-9px;
+    border-radius:50%;
+    transform:rotate(135deg);
+}
+.mirror-left{
+    width:10px;
+    height:5px;
+    background:rgb(51, 51, 51);
+    position: absolute;
+    top:30%;
+    right:-9px;
+    border-radius:50%;
+    transform:rotate(45deg);
+}
+

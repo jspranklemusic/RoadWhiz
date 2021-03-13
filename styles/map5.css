@@ -1,0 +1,32 @@
+.pavement{
+    position: absolute;
+    top:0;
+    left:600px;
+    width:200px;
+    height:400px;
+    background:linear-gradient(90deg, rgb(95, 95, 95),rgb(70, 70, 70));
+    border:10px solid rgb(59, 59, 59);
+    border-top:none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: grid;
+}
+
+.road-fullheight{
+    background:grey;
+    position: absolute;
+    width:75px;
+    height:100%;
+    bottom:0;
+}
+.road-fullheight::after{
+    background:grey;
+    position: absolute;
+    width:75px;
+    height:100%;
+    bottom:0;
+    content:"";
+    left:75px;
+    border-left:5px dashed yellow;
+    box-sizing: border-box;
+}
